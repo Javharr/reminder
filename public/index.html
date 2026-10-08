@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Мой органайзер</title>
+  <meta name="theme-color" content="#f6f3ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#16181c" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="login" class="login" hidden>
+    <form class="login-card" id="loginForm">
+      <div class="logo big">◐</div>
+      <h1>Мой органайзер</h1>
+      <input type="password" name="password" placeholder="Пароль" autofocus required>
+      <button class="btn primary">Войти</button>
+      <p class="err" id="loginErr"></p>
+    </form>
+  </div>
+
+  <div id="app" class="shell" hidden>
+    <nav class="side">
+      <div class="brand"><span class="logo">◐</span><span>Органайзер</span></div>
+      <a href="#today" data-view="today"><i>☀</i><span>Сегодня</span></a>
+      <a href="#schedule" data-view="schedule"><i>▦</i><span>Расписание</span></a>
+      <a href="#tasks" data-view="tasks"><i>✓</i><span>Планы</span></a>
+      <a href="#notes" data-view="notes"><i>✎</i><span>Заметки</span></a>
+      <a href="#settings" data-view="settings"><i>⚙</i><span>Настройки</span></a>
+    </nav>
+    <main id="view"></main>
+  </div>
+
+  <dialog id="modal"><form method="dialog" id="modalForm"></form></dialog>
+  <div id="toast"></div>
+
+  <script src="/shared.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

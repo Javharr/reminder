@@ -1,0 +1,15 @@
+{
+  "name": "reminder",
+  "version": "1.0.0",
+  "description": "Personal organizer: schedule, tasks, notes, push and Telegram reminders",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "express": "^4.21.2",
+    "web-push": "^3.6.7"
+  }
+}
